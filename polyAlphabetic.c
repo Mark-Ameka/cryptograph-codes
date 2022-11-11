@@ -7,7 +7,6 @@ int main(){
     char orig[SUB_MAX] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char key[STR_MAX] = "DECEPTIVEDECEPTIVEDECEPTIVE";
     char text[STR_MAX] = "WEAREDISCOVEREDSAVEYOURSELF";
-    char cipher[STR_MAX];
     
     int i, j;
     int k = 0, t = 0;
@@ -22,10 +21,10 @@ int main(){
     			k = j;
 			}
 		}
-		cipher[count++] = orig[(t+k)%26];
+		text[count++] = orig[(t+k)%26];
 	}
 	
-	printf("%s", cipher);
+	printf("%s", text);
     
     return 0;
 }

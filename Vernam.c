@@ -22,11 +22,7 @@ int main(){
     			k = j;
 			}
 		}
-		if((t^k) > 26){
-			cipher[count++] = orig[(t^k)-26];
-		} else{
-			cipher[count++] = orig[(t^k)];
-		}
+		cipher[count++] = (t^k) > 26 ? orig[(t^k)-26] : orig[(t^k)];
 	}
 	
 	printf("%s", cipher);
