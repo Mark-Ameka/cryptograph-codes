@@ -1,3 +1,9 @@
+/*
+	Lab Act. 7.0.0.1 - Abash Cryptograph C codes
+	Submitted by: Dhony Mark Mendoza
+	Submitted to: Godwin Monserate
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,18 +11,30 @@
 #define STR_MAX 50
 
 /*
-	A = 65	||	a = 97
-	Z = 90	||	z = 122
+	A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+	Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
 	
-	formula:
-	65 + 90 - 65
-	155
+	0 1 2 3 4 5 6 7 8 9
+	9 8 7 6 5 4 3 2 1 0
 	
-	0 = 48
-	9 = 57
-	105
+	A = 65	=>	Z = 90
+	a = 97	=>	z = 122
+	0 = 48	=>	9 = 57
+	
+	lower case = 219
+	upper case = 155
+	digit case = 105
+	
+	formula [ASCII]:
+	[FIRST LETTER] + [LAST LETTER] = SUM
+	SUM - [LETTER] = [REVERSED LETTER]
+	
+	Example [UPPERCASE]:
+	65 + 90 = 155
+	155 - 88[X] = C
 */
 
+//ENCRYPT AND DECRYPT
 void abash(char *word){
 	int i, key = 0;
 	
